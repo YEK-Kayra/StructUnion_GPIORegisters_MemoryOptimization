@@ -1,0 +1,29 @@
+YAPI-1 :
+	StructVariable==>UnionVariable==>StructVariable==>StructVariable 
+YAPI-2 :
+	StructVariable==>StructVariable==>StructVariable==>StructVariable 
+
+İki yapıyı da işlemci hafızasında ne kadar ve nasıl yer kapladığını inceleyeceğiz.
+
+
+gpb1_bits_test.c ==> Bu dosya da 2 farklı struct yapısının hafızada nasıl yer kapladığına odaklandık.
+
+YAPI-1 ÇIKTILARI :
+	printf("Degiskenimizin kapladiği yer : %d byte\n", sizeof(GpioCtrlRegs));			//Çalıştırıldığında 4 byte yazacaktır.
+	printf("Degiskenimizin kapladiği yer : %d byte\n", sizeof(GpioCtrlRegs.GPBMUX1));		//Çalıştırıldığında 4 byte yazacaktır.
+	printf("Degiskenimizin kapladiği yer : %d byte\n", sizeof(GpioCtrlRegs.GPBMUX1.all));		//Çalıştırıldığında 4 byte yazacaktır.
+	printf("Degiskenimizin kapladiği yer : %d byte\n", sizeof(GpioCtrlRegs.GPBMUX1.bit));		//Çalıştırıldığında 4 byte yazacaktır.
+
+
+YAPI-2 ÇIKTILARI :
+	printf("Degiskenimizin kapladiği yer : %d byte\n", sizeof(GpioCtrlRegs));			//Çalıştırıldığında 8 byte yazacaktır.
+	printf("Degiskenimizin kapladiği yer : %d byte\n", sizeof(GpioCtrlRegs.GPBMUX1));		//Çalıştırıldığında 8 byte yazacaktır.
+	printf("Degiskenimizin kapladiği yer : %d byte\n", sizeof(GpioCtrlRegs.GPBMUX1.all));		//Çalıştırıldığında 4 byte yazacaktır.
+	printf("Degiskenimizin kapladiği yer : %d byte\n", sizeof(GpioCtrlRegs.GPBMUX1.bit));		//Çalıştırıldığında 4 byte yazacaktır
+
+ÇIKARIMLARIM :
+	     ==> MCU daki hafıza sınırlı olduğundan sebep, YAPI-1 i kullanmak YAPI-2 ye nazaran daha efektif olacaktır.
+	     ==> Struct içerisinde bitfield tanımlamak da ayrı ayrı değişken tanımlamaktan katbekat daha az yer kaplayacaktır.
+	     ==> Tanımlamaların sayısı arttıkça(örneğin 100 tane register için) Yapi-1, Yapi-2 ye göre yarı yarıya hafıza kaplayacaktır.
+
+
