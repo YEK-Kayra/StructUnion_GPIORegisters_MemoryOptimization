@@ -30,20 +30,20 @@
  */ 
 struct GPB1_BITS_version1
 {
-    uint16_t  GPIO32:2;           // 1:0  GPIO32
-    uint16_t  GPIO33:2;           // 3:2  GPIO33
-    uint16_t  GPIO34:2;           // 5:4  GPIO34
-    uint16_t  GPIO35:2;           // 7:6  GPIO35
-    uint16_t  GPIO36:2;           // 9:8  GPIO36
-    uint16_t  GPIO37:2;           // 11:10    GPIO37
-    uint16_t  GPIO38:2;           // 13:12    GPIO38
-    uint16_t  GPIO39:2;           // 15:14    GPIO39
-    uint16_t  GPIO40:2;           // 17:16    GPIO40
-    uint16_t  GPIO41:2;           // 19:18    GPIO41
-    uint16_t  GPIO42:2;           // 21:20    GPIO42
-    uint16_t  GPIO43:2;           // 23:22    GPIO43
-    uint16_t  GPIO44:2;           // 25:24    GPIO44
-    uint16_t  rsvd1:6;            // 31:26    Reserved
+    uint32_t  GPIO32:2;           // 1:0  GPIO32
+    uint32_t  GPIO33:2;           // 3:2  GPIO33
+    uint32_t  GPIO34:2;           // 5:4  GPIO34
+    uint32_t  GPIO35:2;           // 7:6  GPIO35
+    uint32_t  GPIO36:2;           // 9:8  GPIO36
+    uint32_t  GPIO37:2;           // 11:10    GPIO37
+    uint32_t  GPIO38:2;           // 13:12    GPIO38
+    uint32_t  GPIO39:2;           // 15:14    GPIO39
+    uint32_t  GPIO40:2;           // 17:16    GPIO40
+    uint32_t  GPIO41:2;           // 19:18    GPIO41
+    uint32_t  GPIO42:2;           // 21:20    GPIO42
+    uint32_t  GPIO43:2;           // 23:22    GPIO43
+    uint32_t  GPIO44:2;           // 25:24    GPIO44
+    uint32_t  rsvd1:6;            // 31:26    Reserved
 };
 
 /**
