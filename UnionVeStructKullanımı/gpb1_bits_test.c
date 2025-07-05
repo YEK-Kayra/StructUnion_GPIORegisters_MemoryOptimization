@@ -62,20 +62,20 @@ struct GPB1_BITS_version1
  */ 
 struct GPB1_BITS_version2
 {
-    uint16_t  GPIO32;           // 1:0  GPIO32
-    uint16_t  GPIO33;           // 3:2  GPIO33
-    uint16_t  GPIO34;           // 5:4  GPIO34
-    uint16_t  GPIO35;           // 7:6  GPIO35
-    uint16_t  GPIO36;           // 9:8  GPIO36
-    uint16_t  GPIO37;           // 11:10    GPIO37
-    uint16_t  GPIO38;           // 13:12    GPIO38
-    uint16_t  GPIO39;           // 15:14    GPIO39
-    uint16_t  GPIO40;           // 17:16    GPIO40
-    uint16_t  GPIO41;           // 19:18    GPIO41
-    uint16_t  GPIO42;           // 21:20    GPIO42
-    uint16_t  GPIO43;           // 23:22    GPIO43
-    uint16_t  GPIO44;           // 25:24    GPIO44
-    uint16_t  rsvd1;            // 31:26    Reserved
+    uint16_t  GPIO32;           //   GPIO32
+    uint16_t  GPIO33;           //   GPIO33
+    uint16_t  GPIO34;           //   GPIO34
+    uint16_t  GPIO35;           //   GPIO35
+    uint16_t  GPIO36;           //   GPIO36
+    uint16_t  GPIO37;           //   GPIO37
+    uint16_t  GPIO38;           //   GPIO38
+    uint16_t  GPIO39;           //   GPIO39
+    uint16_t  GPIO40;           //   GPIO40
+    uint16_t  GPIO41;           //   GPIO41
+    uint16_t  GPIO42;           //   GPIO42
+    uint16_t  GPIO43;           //   GPIO43
+    uint16_t  GPIO44;           //   GPIO44
+    uint16_t  rsvd1;            //   Reserved
 };
 
 
