@@ -10,7 +10,7 @@
  *           - `GPB1_BITS_version2`: Her GPIO değeri tam 16-bit olarak saklanan bir yapıdır.
  *           - Program, `sizeof()` fonksiyonunu kullanarak bellek farklarını gösterir.
  *
- * @author   [kendineGomulucu]
+ * @author   [pwmcasso]
  * @date     [28.02.2025]
  * @version  1.0
  */
