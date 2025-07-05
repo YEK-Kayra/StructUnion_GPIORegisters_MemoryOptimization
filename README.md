@@ -19,6 +19,10 @@ This analysis compares two different structure implementations for GPIO control 
 
     StructVariable → StructVariable → StructVariable → StructVariable
   
+#### Bitfield Implementation
+-> Uses bitfields to pack multiple GPIO configurations into single words    
+-> Most memory-efficient for individual register access     
+-> Allows direct bit-level manipulation while minimizing storage        
 
 ## Memory Footprint Analysis
 #### YAPI-1 
@@ -33,6 +37,12 @@ This analysis compares two different structure implementations for GPIO control 
     printf("Variable size: %d byte\n", sizeof(GpioCtrlRegs.GPBMUX1.all)); // Output: 4 bytes
     printf("Variable size: %d byte\n", sizeof(GpioCtrlRegs.GPBMUX1.bit)); // Output: 4 bytes     
 
+#### Bitfield Implementation Results
+    struct GPB1_BITS_version1 deneme_version1;  // Bitfield version
+    struct GPB1_BITS_version2 deneme_version2;  // Non-bitfield version
+
+    printf("Bitfield version size: %d byte\n", sizeof(deneme_version1));  // Output: 4 bytes
+    printf("Standard version size: %d byte\n", sizeof(deneme_version2));  // Output: 28 bytes
 
 ## Key Findings
 #### Memory Efficiency:
